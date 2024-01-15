@@ -16,3 +16,7 @@ async def measure_runtime() -> float:
     start_time = time.time()
     await asyncio.gather(*(async_comprehension() for _ in range(4)))
     return time.time() - start_time
+
+
+if __name__ == '__main__':
+    print(asyncio.run(measure_runtime()))
